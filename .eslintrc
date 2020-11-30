@@ -1,7 +1,29 @@
 {
-    "extends": ["airbnb", "prettier"],
-    "plugins": ["prettier"],
+    "extends": [
+      "airbnb",
+      "plugin:prettier/recommended",
+      "plugin:react/recommended",
+      "plugin:react-hooks/recommended",
+      "plugin:jsx-a11y/recommended"
+    ],
+    "plugins": [
+      "prettier",
+      "react"
+    ],
     "rules": {
-      "prettier/prettier": ["error"]
+      "prettier/prettier": ["error"],
+      "react/jsx-filename-extension":         [1, { "extensions": [".js", ".jsx"] }],
+      "react/jsx-indent":                     [2, 4],
+      "react/jsx-indent-props":               [2, 4],
+      "react/jsx-one-expression-per-line":    [0],
+      "react/prefer-stateless-function":      [1],
+      "react/static-property-placement":      [1, "property assignment"],
+      "react-hooks/rules-of-hooks":           "error", // Checks rules of Hooks
+      "react-hooks/exhaustive-deps":          "warn" // Checks effect dependencies
+    },
+    "parserOptions": {
+      "ecmaFeatures": {
+          "jsx": true
+      }
     }
 }
